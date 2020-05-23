@@ -49,6 +49,7 @@
 		callback = callback || function () {};
 
 		if (queryType === 'function') {
+			console.log("testShowStart")
 			callback = query;
 			return this.storage.findAll(callback);
 		} else if (queryType === 'string' || queryType === 'number') {

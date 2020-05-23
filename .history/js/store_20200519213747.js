@@ -46,7 +46,7 @@
 
 		var todos = JSON.parse(localStorage[this._dbName]).todos;
 
-		callback.call(this, todos.filter(function (todo) {
+		callback.c(this, todos.filter(function (todo) {
 			for (var q in query) {
 				if (query[q] !== todo[q]) {
 					return false;
@@ -57,11 +57,11 @@
 	};
 
 	/**
-	 * Will retrieve all data from the collection
+	 * Will retrieve  data from the collection
 	 *
-	 * @param {function} callback The callback to fire upon retrieving data
+	 * @param {function} cback The cback to fire upon retrieving data
 	 */
-	Store.prototype.findAll = function (callback) {
+	Store.prototype.find = function (callback) {
 		callback = callback || function () {};
 		callback.call(this, JSON.parse(localStorage[this._dbName]).todos);
 	};

@@ -62,6 +62,7 @@
 	 * todo-list
 	 */
 	Controller.prototype.showAll = function () {
+		console.log("testShowAll")
 		var self = this;
 		self.model.read(function (data) {
 			self.view.render('showEntries', data);
@@ -72,6 +73,7 @@
 	 * Renders all active tasks
 	 */
 	Controller.prototype.showActive = function () {
+		console.log("testActive");
 		var self = this;
 		self.model.read({ completed: false }, function (data) {
 			self.view.render('showEntries', data);
