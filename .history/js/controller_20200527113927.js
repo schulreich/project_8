@@ -65,7 +65,6 @@
 		console.log("testShowAll")
 		var self = this;
 		self.model.read(function (data) {
-			//test start app return;
 			self.view.render('showEntries', data);
 		});
 	};
@@ -74,7 +73,7 @@
 	 * Renders all active tasks
 	 */
 	Controller.prototype.showActive = function () {
-		//test2 return; 
+		return; 
 		console.log("testActive");
 		var self = this;
 		self.model.read({ completed: false }, function (data) {
@@ -86,7 +85,7 @@
 	 * Renders all completed tasks
 	 */
 	Controller.prototype.showCompleted = function () {
-		//test3 return;
+		//test3
 		var self = this;
 		self.model.read({ completed: true }, function (data) {
 			self.view.render('showEntries', data);
@@ -172,7 +171,7 @@
 				console.log("Element with ID: " + id + " has been removed.");
 			}
 		});
-		
+
 		self.model.remove(id, function () {
 			self.view.render('removeItem', id);
 		});

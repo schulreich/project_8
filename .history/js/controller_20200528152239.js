@@ -65,7 +65,6 @@
 		console.log("testShowAll")
 		var self = this;
 		self.model.read(function (data) {
-			//test start app return;
 			self.view.render('showEntries', data);
 		});
 	};
@@ -172,8 +171,9 @@
 				console.log("Element with ID: " + id + " has been removed.");
 			}
 		});
-		
+
 		self.model.remove(id, function () {
+			return
 			self.view.render('removeItem', id);
 		});
 

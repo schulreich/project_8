@@ -65,7 +65,7 @@
 		console.log("testShowAll")
 		var self = this;
 		self.model.read(function (data) {
-			//test start app return;
+			return;
 			self.view.render('showEntries', data);
 		});
 	};

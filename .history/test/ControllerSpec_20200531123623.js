@@ -79,7 +79,7 @@ describe('controller', function () {
 		});
 
 		it('should show active entries', function () {
-			//test
+			//test2
 			var todo = {title: 'my todo'};
 			setUpModel([todo]);
 
@@ -89,7 +89,7 @@ describe('controller', function () {
 		});
 
 		it('should show completed entries', function () {
-			//test
+			//test3
 			var todo = {title: 'my todo'};
 			setUpModel([todo]);
 
@@ -144,7 +144,6 @@ describe('controller', function () {
 	describe('App start', function () {
 
 		it('should show entries on start-up', function () {
-			//test
 			setUpModel([]);
 
 			subject.setView('');
@@ -153,7 +152,6 @@ describe('controller', function () {
 		});
 
 		it('should highlight "All" filter by default', function () {
-			//test
 			var todo = {id: 42, title: 'my todo', completed: true};
 			setUpModel([todo]);
 
@@ -166,7 +164,6 @@ describe('controller', function () {
 	describe('switch  filter', function () {
 
 		it('should highlight "Active" filter when switching to active view', function () {
-			//test
 			var todo = {id: 42, title: 'my todo', completed: true};
 			setUpModel([todo]);
 
@@ -178,7 +175,6 @@ describe('controller', function () {
 
 	describe('toggle all', function () {
 		it('should toggle all todos to completed', function () {
-			//test
 			var todo = {id: 42, title: 'my todo', completed: false};
 			setUpModel([todo]);
 
@@ -189,7 +185,6 @@ describe('controller', function () {
 		});
 
 		it('should update the view', function () {
-			//test
 			var todo = {id: 42, title: 'my todo', completed: false};
 			setUpModel([todo]);
 
@@ -203,7 +198,6 @@ describe('controller', function () {
 	describe('new todo', function () {
 
 		it('should add a new todo to the model', function () {
-			//test
 			subject.setView('');
 			subject.addItem('myTodo');
 
